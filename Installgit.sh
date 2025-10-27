@@ -6,5 +6,6 @@ if [ $ID -ne 0 ]
 then 
     echo  "you are not a root user"
 else 
-    yum install mysql -y
+    echo "you are root user"
 fi
+yum install mysql -y
