@@ -6,5 +6,5 @@ if [ $ID -ne 0 ]
 then 
     echo  "you are not a root user"
 else 
-    yum install mongod -y
+    yum install mysql -y
 fi
