@@ -2,7 +2,7 @@
 
 Fruit=("apple" "mango" "banaya")
 
-    echo "($fruit{0})"
-    echo "($fruit{1})"
-    echo "($fruit{2})"
-    echo "($fruit{@})"
+    echo "{$Fruit[0]}"
+    echo "{$Fruit[1]}"
+    echo "{$Fruit[2]}"
+    echo "{$Fruit[@]}"
