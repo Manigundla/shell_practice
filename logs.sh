@@ -1,9 +1,9 @@
 #!/bin/bash 
 
 ID=$(id -u)
-Timestamp=$(date +%D-%T)
+TIMESTAMP=$(date +%D-%T)
 
-LOGFILE="/tmp/$0-$Timestamp.log"
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 validate(){
     if [ $1 -ne 0 ]
