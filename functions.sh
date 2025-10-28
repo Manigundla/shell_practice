@@ -25,6 +25,6 @@ yum install nginx -y
 validate
 
 
-yum install gitk -y
+yum install git01 -y
 
 validate
