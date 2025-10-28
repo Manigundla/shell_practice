@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 ID=$(id -u)
-TIMESTAMP=$(date +%D-%T)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
