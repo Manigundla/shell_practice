@@ -3,7 +3,7 @@
 ID=$(id -u)
 Timestamp=$(date +%D-%T)
 
-LOGFILE="/tmp/$0-$TIMESTAMP.log"
+LOGFILE="/tmp/$0-$Timestamp.log"
 
 validate(){
     if [ $1 -ne 0 ]
