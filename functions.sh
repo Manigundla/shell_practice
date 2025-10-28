@@ -5,9 +5,9 @@ ID=$(id -u)
 validate(){
     if [ $? -eq 0 ]
     then 
-        echo "installing nginx is succcesful"
+        echo "installing is succcesful"
     else 
-        echo "installing nginx is failed"
+        echo "installing is failed"
         exit 1
     fi
 }
@@ -25,6 +25,6 @@ yum install nginx -y
 validate
 
 
-yum install git -y
+yum install gitk -y
 
 validate
