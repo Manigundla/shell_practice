@@ -18,7 +18,7 @@ if [ $ID -eq 0 ]
 then 
     echo "you are a root user"
 else 
-    echo "you need to be root user to run thid command"
+    echo "you need to be root user to run this command"
     exit 1
 fi
 
