@@ -10,13 +10,13 @@ else
     exit 1
 fi
 
-yum install nginx -y
+yum install nginx2 -y
 
 if [ $? -eq 0 ]
 then 
     echo "installing nginx is succcesful"
 else 
-    echo "installing nginx2 is failed"
+    echo "installing nginx is failed"
     exit 1
 fi
 
