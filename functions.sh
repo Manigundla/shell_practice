@@ -16,6 +16,8 @@ if [ $? -eq 0 ]
 then 
     echo "installing nginx is succcesful"
 else 
-    echo "installing nginx is failed"
+    echo "installing nginx2 is failed"
     exit 1
 fi
+
+yum install git -y
