@@ -11,6 +11,7 @@ then
     exit 1
 else 
     echo "$2 installing is succesfull"
+fi
 }
 
 if [ $ID -eq 0 ]
