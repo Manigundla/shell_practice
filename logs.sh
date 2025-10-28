@@ -22,11 +22,11 @@ else
     exit 1
 fi
 
-yum install git -y &>> Log_files
+yum install git -y &>> $Log_files
 validate $? git 
 
-yum install mysql -y &>> Log_files
+yum install mysql -y &>> $Log_files
 validate $? mysql 
 
-yum install nginx -y &>> Log_files
+yum install nginx -y &>> $Log_files
 validate $? nginx
