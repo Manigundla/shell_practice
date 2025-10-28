@@ -22,7 +22,7 @@ fi
 
 yum install git -y
 
-if [$? -eq 0]
+if [ $? -eq 0 ]
 then 
     echo "installing git is succesfull"
 else 
