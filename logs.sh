@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 ID=$(id -u)
-Timestamp=$(date+%D-%T)
+Timestamp=$(date +%D-%T)
 Log_files=/tmp/$Timestamp.log
 
 validate(){
