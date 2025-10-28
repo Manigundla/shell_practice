@@ -3,7 +3,7 @@
 ID=$(id -u)
 Timestamp=$(date +%D-%T)
 
-Log_files="/tmp/$0-$Timestamp.log"
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 validate(){
     if [ $1 -ne 0 ]
@@ -23,11 +23,11 @@ else
     exit 1
 fi
 
-yum install git -y &>> $Log_files
+yum install git -y &>> $LOGFILE
 validate $? git 
 
-yum install mysql -y &>> $Log_files
+yum install mysql -y &>> $LOGFILE
 validate $? mysql 
 
-yum install nginx -y &>> $Log_files
+yum install nginx -y &>> $LOGFILE
 validate $? nginx
