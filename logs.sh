@@ -25,7 +25,7 @@ fi
 yum install git -y &>> Log_files
 validate $? git 
 
-yum install mysqlll -y &>> Log_files
+yum install mysql -y &>> Log_files
 validate $? mysql 
 
 yum install nginx -y &>> Log_files
