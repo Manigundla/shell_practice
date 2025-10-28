@@ -10,7 +10,7 @@ else
     exit 1
 fi
 
-yum install nginx2 -y
+yum install nginx -y
 
 if [ $? -eq 0 ]
 then 
@@ -21,3 +21,10 @@ else
 fi
 
 yum install git -y
+
+if [$? -eq 0]
+then 
+    echo "installing git is succesfull"
+else 
+    echo "installing git failed"
+fi
