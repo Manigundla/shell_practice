@@ -2,6 +2,16 @@
 
 ID=$(id -u)
 
+validate(){
+    if [ $? -eq 0 ]
+    then 
+        echo "installing nginx is succcesful"
+    else 
+        echo "installing nginx is failed"
+        exit 1
+    fi
+}
+
 if [ $ID -eq 0 ]
 then 
     echo "you are a sudo user"
@@ -12,19 +22,9 @@ fi
 
 yum install nginx -y
 
-if [ $? -eq 0 ]
-then 
-    echo "installing nginx is succcesful"
-else 
-    echo "installing nginx is failed"
-    exit 1
-fi
+validate
+
 
 yum install git -y
 
-if [ $? -eq 0 ]
-then 
-    echo "installing git is succesfull"
-else 
-    echo "installing git failed"
-fi
+validate
