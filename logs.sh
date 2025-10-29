@@ -4,22 +4,26 @@ ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 validate(){
     if [ $1 -ne 0 ]
 then 
-    echo "$2 installing is failed"
+    echo "$2 installing is $R failed $N"
     exit 1
 else 
-    echo "$2 installing is succesfull"
+    echo "$2 installing is $G succesfull $N"
 fi
 }
 
 if [ $ID -eq 0 ]
 then 
-    echo "you are a root user"
+    echo "$G you are a root user $N"
 else 
-    echo "you need to be root user to run this command"
+    echo "$R you need to be root user to run this command $N"
     exit 1
 fi
 
