@@ -13,18 +13,18 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 validate(){
     if [ $1 -ne 0 ]
 then 
-    echo "$2 installing is $R failed $N"
+    echo -e "$2 installing is $R failed $N"
     exit 1
 else 
-    echo "$2 installing is $G succesfull $N"
+    echo -e "$2 installing is $G succesfull $N"
 fi
 }
 
 if [ $ID -eq 0 ]
 then 
-    echo "$G you are a root user $N"
+    echo -e "$G you are a root user $N"
 else 
-    echo "$R you need to be root user to run this command $N"
+    echo -e "$R you need to be root user to run this command $N"
     exit 1
 fi
 
