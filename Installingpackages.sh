@@ -33,7 +33,7 @@ do
     then 
         echo -e "$package already installed.. $Y skipping $N" 
     else 
-        yum install $package -y 
+        yum install $package -y &>> $Log_files
         Validate $? $package
     fi
 done 
