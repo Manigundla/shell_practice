@@ -31,7 +31,7 @@ do
     yum list avaliable $package
     if [ $? -eq 0 ]
     then 
-        echo "$package already installed.. $Y skipping $N" &>> $Log_files
+        echo -e "$package already installed.. $Y skipping $N" &>> $Log_files
     else 
         yum install $package -y &>> $Log_files
         Validate $? $package
