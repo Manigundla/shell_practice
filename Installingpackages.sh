@@ -26,15 +26,15 @@ else
     exit 1
 fi
 
-yum install mysql -y &>> $Log_files
-
-Validate $? mysql
-
-yum install nginx -y &>> $Log_files
-
-Validate $? nginx
-
-yum install git -y &>> $Log_files
-
-Validate $? git 
+for package in $@
+do 
+    yum list avaliable $package
+    if [ $? -eq 0 ]
+    then 
+        echo "$package already installed.. $Y skipping $N" &>> $Log_files
+    else 
+        yum install $package -y &>> $Log_files
+        Validate $? $package
+    fi
+done 
 
