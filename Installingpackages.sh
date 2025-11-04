@@ -6,6 +6,16 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+Validate(){
+    if [ $? -eq 0 ]
+then 
+    echo -e "$G installing mysql successful $N"
+else 
+    echo -e "$R installing msql failed $N"
+    exit 1
+fi
+}
+
 if [ $ID -eq 0 ]
 then 
     echo -e "$G you ara a root user $N"
@@ -16,10 +26,4 @@ fi
 
 yum install mysql -y
 
-if [ $? -eq 0 ]
-then 
-    echo -e "$G installing mysql successful $N"
-else 
-    echo -e "$R installing msql failed $N"
-    exit 1
-fi
+Validate
