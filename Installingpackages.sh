@@ -14,12 +14,12 @@ else
     exit 1
 fi
 
-yum install mongodb -y
+yum install mysql -y
 
 if [ $? -eq 0 ]
 then 
-    echo -e "$G installing mongodb successful $N"
+    echo -e "$G installing mysql successful $N"
 else 
-    echo -e "$R installing mongodb failed $N"
+    echo -e "$R installing msql failed $N"
     exit 1
 fi
