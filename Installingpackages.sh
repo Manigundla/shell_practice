@@ -5,6 +5,8 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+Timestamp=$(date +%F-%H-%M-%S) 
+Log_files="/tmp/$0-$Timestamp.log"
 
 Validate(){
     if [ $1 -eq 0 ]
@@ -24,6 +26,15 @@ else
     exit 1
 fi
 
-yum install mysql -y
+yum install mysql -y &>> $Log_files
 
 Validate $? mysql
+
+yum install nginx -y &>> $Log_files
+
+Validate $? nginx
+
+yum install git -y &>> $Log_files
+
+Validate $? git 
+
