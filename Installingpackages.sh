@@ -7,11 +7,11 @@ Y="\e[33m"
 N="\e[0m"
 
 Validate(){
-    if [ $? -eq 0 ]
+    if [ $1 -eq 0 ]
 then 
-    echo -e "$G installing mysql successful $N"
+    echo -e "$G installing $2 successful $N"
 else 
-    echo -e "$R installing msql failed $N"
+    echo -e "$R installing $2 failed $N"
     exit 1
 fi
 }
@@ -26,4 +26,4 @@ fi
 
 yum install mysql -y
 
-Validate
+Validate $? mysql
