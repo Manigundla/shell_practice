@@ -28,10 +28,10 @@ fi
 
 for package in $@
 do 
-    yum list avaliable $package
+    yum list avaliable $package &>> $Log_files
     if [ $? -eq 0 ]
     then 
-        echo -e "$package already installed.. $Y skipping $N" &>> $Log_files
+        echo -e "$package already installed.. $Y skipping $N" 
     else 
         yum install $package -y &>> $Log_files
         Validate $? $package
